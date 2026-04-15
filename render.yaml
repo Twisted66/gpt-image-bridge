@@ -1,0 +1,26 @@
+# Render Blueprint Configuration
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: gpt-image-bridge
+    runtime: python
+    plan: free
+    # Root directory for the service
+    rootDir: backend
+    # Build command installs dependencies
+    buildCommand: pip install -r requirements.txt
+    # Start command runs the FastAPI app
+    startCommand: bash start.sh
+    # Environment variables (set these in Render dashboard)
+    envVars:
+      - key: IMAGE_BRIDGE_API_KEY
+        generateValue: true
+      - key: IMAGE_BRIDGE_ALLOWED_BEARER
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    # Health check endpoint
+    healthCheckPath: /health
+    # Auto-deploy on git push
+    autoDeploy: true

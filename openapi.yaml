@@ -1,0 +1,110 @@
+openapi: 3.1.0
+info:
+  title: Image Bridge API
+  version: 1.0.0
+  description: |
+    API for generating images via AI and saving them to a specified path.
+    Designed for integration with Custom GPT Actions.
+servers:
+  - url: https://gpt-image-bridge.onrender.com
+    description: Production server (Render)
+paths:
+  /health:
+    get:
+      operationId: healthCheck
+      summary: Health check endpoint
+      description: Returns 200 OK if the service is running
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+  /generate-image:
+    post:
+      operationId: generateImage
+      summary: Generate an image asset and save it to the requested path
+      description: |
+        Generates an image based on the provided prompt and saves it to the specified path.
+        Requires either OAuth2 or API Key authentication.
+      security:
+        - oauth2: [image.generate]
+        - apiKey: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              properties:
+                prompt:
+                  type: string
+                  description: Text description of the image to generate
+                out_path:
+                  type: string
+                  description: Absolute file path where the image should be saved
+              required: [prompt, out_path]
+      responses:
+        '200':
+          description: Image generation result
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: false
+                properties:
+                  ok:
+                    type: boolean
+                    description: Whether the operation was successful
+                  path:
+                    type: string
+                    description: The requested output path
+                  absolute_path:
+                    type: string
+                    description: The resolved absolute path where image was saved
+                  mime_type:
+                    type: string
+                    description: MIME type of the generated image (e.g., image/png)
+                  width:
+                    type: integer
+                    nullable: true
+                    description: Width of the generated image in pixels
+                  height:
+                    type: integer
+                    nullable: true
+                    description: Height of the generated image in pixels
+                  message:
+                    type: string
+                    description: Status message
+                required: [ok, path, absolute_path, mime_type, message]
+        '400':
+          description: Bad request - invalid input parameters
+        '401':
+          description: Unauthorized - missing or invalid authentication
+        '403':
+          description: Forbidden - insufficient permissions
+        '500':
+          description: Server error during image generation
+components:
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: OAuth 2.0 authentication (for advanced use cases)
+      flows:
+        authorizationCode:
+          authorizationUrl: https://auth.your-bridge.example.com/oauth/authorize
+          tokenUrl: https://auth.your-bridge.example.com/oauth/token
+          scopes:
+            image.generate: Generate image assets
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: |
+        API key authentication. Recommended for Custom GPT Actions.
+        Generate a secure key in your Render dashboard.

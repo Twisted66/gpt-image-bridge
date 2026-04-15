@@ -1,0 +1,7 @@
+[mcp_servers.image_bridge]
+command = "python3"
+args = ["/absolute/path/to/gpt-codex-image-bridge/mcp/mcp_server.py"]
+
+[mcp_servers.image_bridge.env]
+IMAGE_BRIDGE_URL = "http://127.0.0.1:8787"
+IMAGE_BRIDGE_OAUTH_TOKEN = "replace-with-valid-bearer-token"
