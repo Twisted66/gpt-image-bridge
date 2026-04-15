@@ -80,6 +80,46 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
+  /generate-images:
+    post:
+      operationId: batchGenerateImages
+      summary: Generate multiple image assets in a single request
+      description: |
+        Generates multiple images based on provided prompts. 
+        Prompts are prefixed with an optional style anchor for consistency.
+      security:
+        - apiKey: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchGenerateImageRequest'
+      responses:
+        '200':
+          description: Batch generation successful
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BatchGenerateImageResponse'
+        '400':
+          description: Bad request - invalid input parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server error during batch processing
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
 components:
   schemas:
     GenerateImageResponse:
@@ -110,6 +150,53 @@ components:
           type: string
           description: Status message
       required: [ok, path, absolute_path, mime_type, message]
+    
+    BatchGenerateImageRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        style_anchor:
+          type: string
+          maxLength: 1000
+          description: Shared style description prepended to each item prompt
+        items:
+          type: array
+          minItems: 1
+          maxItems: 20
+          items:
+            $ref: '#/components/schemas/GenerateImageItem'
+      required: [items]
+
+    GenerateImageItem:
+      type: object
+      additionalProperties: false
+      properties:
+        prompt:
+          type: string
+          minLength: 1
+          maxLength: 2000
+          description: Text description of the image
+        out_path:
+          type: string
+          minLength: 1
+          pattern: "^[a-zA-Z0-9_\\-\\./]+\\.(png|jpg|jpeg|webp)$"
+          description: Relative save path
+      required: [prompt, out_path]
+
+    BatchGenerateImageResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        ok:
+          type: boolean
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/GenerateImageResponse'
+        message:
+          type: string
+      required: [ok, results, message]
+
     
     ErrorResponse:
       type: object

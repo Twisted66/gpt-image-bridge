@@ -1,12 +1,20 @@
 import os
 
-from fastapi import Depends, FastAPI, HTTPException, Request, status
+from fastapi import Depends, FastAPI, Header, HTTPException, Request, status
+
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from auth import verify_api_key, verify_bearer_token
-from models import ErrorResponse, GenerateImageRequest, GenerateImageResponse
+from models import (
+    BatchGenerateImageRequest,
+    BatchGenerateImageResponse,
+    ErrorResponse,
+    GenerateImageRequest,
+    GenerateImageResponse,
+)
+
 from providers.generator import generate_image_bytes
 from storage import resolve_target, write_bytes
 
@@ -53,9 +61,10 @@ async def http_exception_handler(request: Request, exc: HTTPException):
     )
 
 
+
 def verify_auth(
-    authorization: str | None = None,
-    x_api_key: str | None = None,
+    authorization: str | None = Header(default=None),
+    x_api_key: str | None = Header(default=None, alias="X-API-Key"),
 ) -> str:
     """Verify either Bearer token or API key authentication."""
     if x_api_key:
@@ -138,4 +147,53 @@ def generate_image(
         width=width,
         height=height,
         message="image written successfully",
+    )
+
+@app.post(
+    "/generate-images",
+    response_model=BatchGenerateImageResponse,
+    responses={
+        400: {"model": ErrorResponse},
+        401: {"model": ErrorResponse},
+        500: {"model": ErrorResponse},
+    }
+)
+def batch_generate_images(
+    payload: BatchGenerateImageRequest,
+    _token: str = Depends(verify_auth),
+) -> BatchGenerateImageResponse:
+    """Generate multiple images in a batch."""
+    results = []
+    style_anchor = payload.style_anchor or ""
+    
+    for item in payload.items:
+        # Prepend style anchor if provided
+        full_prompt = f"{style_anchor.strip()} {item.prompt.strip()}".strip()
+        
+        try:
+            target = resolve_target(item.out_path)
+            raw, mime_type, width, height = generate_image_bytes(full_prompt)
+            write_bytes(target, raw)
+            
+            results.append(GenerateImageResponse(
+                ok=True,
+                path=item.out_path,
+                absolute_path=str(target),
+                mime_type=mime_type,
+                width=width,
+                height=height,
+                message="image written successfully",
+            ))
+        except Exception as exc:
+            # For batch, we might want to continue or fail. 
+            # In this simple bridge, let's fail fast if one fails to keep it clean for the GPT.
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Batch item failed ({item.out_path}): {exc}",
+            )
+
+    return BatchGenerateImageResponse(
+        ok=True,
+        results=results,
+        message=f"successfully generated {len(results)} images",
     )

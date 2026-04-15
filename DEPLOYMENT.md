@@ -131,6 +131,13 @@ User: "Create a sunset image and save it to /images/sunset.png"
 → Call generateImage with {"prompt": "Beautiful sunset over mountains with orange sky", "out_path": "/images/sunset.png"}
 ```
 
+### 4. Batch Generation (New)
+
+The bridge now supports batch generation via the `/generate-images` endpoint. This is more efficient for multiple images and ensures style consistency across the set.
+
+Example instructions for batching:
+"When asked for multiple images, use the `batchGenerateImages` action. Always provide a shared `style_anchor` to maintain a unified look."
+
 ---
 
 ## Authentication Options

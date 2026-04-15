@@ -1,4 +1,6 @@
+from typing import Literal
 from pydantic import BaseModel, Field
+
 
 
 class GenerateImageRequest(BaseModel):
@@ -19,6 +21,20 @@ class GenerateImageRequest(BaseModel):
     )
 
 
+class BatchGenerateImageRequest(BaseModel):
+    style_anchor: str | None = Field(
+        None,
+        max_length=1000,
+        description="A style description to be prepended to each item's prompt for consistency."
+    )
+    items: list[GenerateImageRequest] = Field(
+        ...,
+        min_length=1,
+        max_length=20,
+        description="A list of images to generate."
+    )
+
+
 class GenerateImageResponse(BaseModel):
     ok: bool = Field(..., description="Whether the operation was successful.")
     path: str = Field(..., description="The relative path requested.")
@@ -29,13 +45,20 @@ class GenerateImageResponse(BaseModel):
     message: str = Field(..., description="A status message.")
 
 
+class BatchGenerateImageResponse(BaseModel):
+    ok: bool = Field(..., description="Whether the overall operation was successful.")
+    results: list[GenerateImageResponse] = Field(..., description="Detailed results for each item.")
+    message: str = Field(..., description="Summary status message.")
+
+
 class ErrorDetail(BaseModel):
     loc: list[str | int] | None = Field(None, description="Location of the error (e.g., ['body', 'prompt']).")
     msg: str = Field(..., description="A human-readable error message.")
     type: str = Field(..., description="The type of error (e.g., 'value_error.missing').")
 
 
+
 class ErrorResponse(BaseModel):
-    ok: bool = Field(False, const=True)
+    ok: Literal[False] = Field(False, description="Whether the operation was successful (always false for errors).")
     error: str = Field(..., description="A high-level error code or summary.")
     details: list[ErrorDetail] | None = Field(None, description="Structured error details.")
