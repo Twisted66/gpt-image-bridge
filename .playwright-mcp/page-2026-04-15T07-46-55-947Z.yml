@@ -1,0 +1,265 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - generic [ref=e5]:
+          - link "Render" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - img "Render" [ref=e8]
+          - button "M My Workspace" [ref=e12] [cursor=pointer]:
+            - generic [ref=e13]:
+              - generic [ref=e14]: M
+              - generic "My Workspace" [ref=e15]
+              - img [ref=e16]
+        - generic [ref=e20]:
+          - navigation [ref=e21]:
+            - list [ref=e22]:
+              - listitem [ref=e23]:
+                - button "gpt-image-bridge" [ref=e1532] [cursor=pointer]:
+                  - generic [ref=e1533]:
+                    - img [ref=e1534]
+                    - generic [ref=e1536]:
+                      - generic [ref=e1537]: gpt-image-bridge
+                      - img [ref=e1538]
+          - button "Search Ctrl + K" [ref=e31] [cursor=pointer]:
+            - img [ref=e33]
+            - text: Search
+            - generic [ref=e35]:
+              - img [ref=e36]
+              - generic [ref=e38]: Ctrl
+              - generic [ref=e39]: +
+              - generic [ref=e40]: K
+              - generic [ref=e41]: K
+        - generic [ref=e42]:
+          - button "New" [ref=e44] [cursor=pointer]:
+            - generic [ref=e45]:
+              - img [ref=e46]
+              - generic [ref=e48]: New
+          - button "Upgrade" [ref=e50] [cursor=pointer]:
+            - generic [ref=e51]:
+              - img [ref=e52]
+              - generic [ref=e54]: Upgrade
+          - button "Help" [ref=e56] [cursor=pointer]:
+            - img "Help" [ref=e57]
+          - button "n" [ref=e62] [cursor=pointer]:
+            - generic [ref=e64]: "n"
+      - generic [ref=e65]:
+        - navigation [ref=e1369]:
+          - separator [ref=e1370]
+          - generic [ref=e1371]:
+            - generic [ref=e1372]:
+              - link "Dashboard" [ref=e1540] [cursor=pointer]:
+                - /url: /
+                - img [ref=e1374]
+                - generic [ref=e1376]: Dashboard
+              - generic [ref=e1377]:
+                - img [ref=e1541]
+                - generic [ref=e1383]: gpt-image-bridge
+            - generic [ref=e1384]:
+              - list [ref=e1543]:
+                - listitem [ref=e1544]:
+                  - link "Events" [ref=e1545] [cursor=pointer]:
+                    - /url: /web/srv-d7fk4i57vvec73acusn0/events
+                    - img [ref=e1546]
+                    - generic [ref=e1553]: Events
+                - listitem [ref=e1554]:
+                  - link "Settings" [ref=e1555] [cursor=pointer]:
+                    - /url: /web/srv-d7fk4i57vvec73acusn0/settings
+                    - img [ref=e1556]
+                    - generic [ref=e1559]: Settings
+              - generic [ref=e1560]:
+                - generic [ref=e1561]: Monitor
+                - list "Monitor" [ref=e1562]:
+                  - listitem [ref=e1563]:
+                    - link "Logs" [ref=e1564] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/logs
+                      - img [ref=e1565]
+                      - generic [ref=e1570]: Logs
+                  - listitem [ref=e1571]:
+                    - link "Metrics" [ref=e1572] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/metrics
+                      - img [ref=e1573]
+                      - generic [ref=e1575]: Metrics
+              - generic [ref=e1576]:
+                - generic [ref=e1577]: Manage
+                - list "Manage" [ref=e1578]:
+                  - listitem [ref=e1579]:
+                    - link "Environment" [ref=e1580] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/env
+                      - img [ref=e1581]
+                      - generic [ref=e1585]: Environment
+                  - listitem [ref=e1586]:
+                    - link "Shell" [ref=e1587] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/shell
+                      - img [ref=e1588]
+                      - generic [ref=e1592]:
+                        - generic [ref=e1593]: Shell
+                        - status [ref=e1596]:
+                          - img [ref=e1597]
+                  - listitem [ref=e1599]:
+                    - link "Scaling" [ref=e1600] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/scaling
+                      - img [ref=e1601]
+                      - generic [ref=e1606]:
+                        - generic [ref=e1607]: Scaling
+                        - status [ref=e1610]:
+                          - img [ref=e1611]
+                  - listitem [ref=e1613]:
+                    - link "Previews" [ref=e1614] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/previews
+                      - img [ref=e1615]
+                      - generic [ref=e1619]: Previews
+                  - listitem [ref=e1620]:
+                    - link "Disk" [ref=e1621] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/disks
+                      - img [ref=e1622]
+                      - generic [ref=e1627]:
+                        - generic [ref=e1628]: Disk
+                        - status [ref=e1631]:
+                          - img [ref=e1632]
+                  - listitem [ref=e1634]:
+                    - link "One-Off Jobs" [ref=e1635] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/jobs
+                      - img [ref=e1636]
+                      - generic [ref=e1642]:
+                        - generic [ref=e1643]: One-Off Jobs
+                        - status [ref=e1646]:
+                          - img [ref=e1647]
+          - generic [ref=e1403]:
+            - alert [ref=e1404]:
+              - img [ref=e1406]
+              - generic [ref=e1410]:
+                - generic [ref=e1411]:
+                  - generic [ref=e1412]: "Workflows: Now in beta"
+                  - generic [ref=e1413]:
+                    - text: Orchestrate your agents and background jobs with automatic retries and scale-to-zero.
+                    - link "Learn more" [ref=e1414] [cursor=pointer]:
+                      - /url: https://render.com/docs/workflows
+                - link "Create Workflow" [ref=e1416] [cursor=pointer]:
+                  - /url: /workflow/new
+              - button "Close notification" [ref=e1417] [cursor=pointer]:
+                - img [ref=e1418]
+            - generic [ref=e1420]:
+              - button "Collapse items" [expanded] [ref=e1421] [cursor=pointer]:
+                - img [ref=e1422]
+              - list "Footer navigation" [ref=e1424]:
+                - listitem [ref=e1425]:
+                  - link "Changelog" [ref=e1426] [cursor=pointer]:
+                    - /url: https://render.com/changelog
+                    - img [ref=e1427]
+                    - generic [ref=e1432]: Changelog
+                - listitem [ref=e1433]:
+                  - link "Invite a friend" [ref=e1434] [cursor=pointer]:
+                    - /url: /invites
+                    - img [ref=e1435]
+                    - generic [ref=e1437]: Invite a friend
+                - listitem [ref=e1438]:
+                  - button "Contact support" [ref=e1439] [cursor=pointer]:
+                    - img [ref=e1440]
+                    - generic [ref=e1444]: Contact support
+              - link "Render Status" [ref=e1446] [cursor=pointer]:
+                - /url: https://status.render.com
+                - img [ref=e1447]
+                - generic [ref=e1449]: Render Status
+        - generic [ref=e1649]:
+          - banner [ref=e1651]:
+            - generic [ref=e1652]:
+              - generic [ref=e1653]:
+                - img [ref=e1654]
+                - generic [ref=e1656]: Web Service
+              - generic [ref=e1657]:
+                - heading "gpt-image-bridge Python 3 Free Upgrade your instance Blueprint managed" [level=1] [ref=e1659]:
+                  - generic [ref=e1660]: gpt-image-bridge
+                  - generic [ref=e1661]:
+                    - generic [ref=e1662]: Python 3
+                    - link "Free" [ref=e1663] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/plan
+                      - generic [ref=e1664]: Free
+                    - link "Upgrade your instance" [ref=e1665] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/plan
+                      - text: Upgrade your instance
+                      - img [ref=e1667]
+                    - link "Blueprint managed" [ref=e1671] [cursor=pointer]:
+                      - /url: /blueprint/exs-d7fk48pf9bms73eigvcg
+                      - img [ref=e1672]
+                      - generic [ref=e1677]: Blueprint managed
+                - generic [ref=e1679]:
+                  - button "Connect" [ref=e1680] [cursor=pointer]:
+                    - generic [ref=e1681]: Connect
+                    - img [ref=e1682]
+                  - button "Manual Deploy" [ref=e1684] [cursor=pointer]:
+                    - generic [ref=e1685]: Manual Deploy
+                    - img [ref=e1686]
+            - generic [ref=e1690]:
+              - generic [ref=e1692]:
+                - generic [ref=e1693]: "Service ID:"
+                - generic "Service ID:" [ref=e1694]:
+                  - generic [ref=e1695]: srv-d7fk4i57vvec73acusn0
+                  - button "Copy" [ref=e1698] [cursor=pointer]:
+                    - img [ref=e1699]
+              - generic [ref=e1702]:
+                - img "GitHub" [ref=e1704]
+                - link "Twisted66 / gpt-image-bridge master" [ref=e1706] [cursor=pointer]:
+                  - /url: https://github.com/Twisted66/gpt-image-bridge/tree/master
+                  - generic [ref=e1707]:
+                    - generic [ref=e1708]: Twisted66 / gpt-image-bridge
+                    - img [ref=e1709]
+                    - generic [ref=e1711]: master
+              - generic "Copy" [ref=e1713]:
+                - link "https://gpt-image-bridge.onrender.com" [ref=e1715] [cursor=pointer]:
+                  - /url: https://gpt-image-bridge.onrender.com
+                - button "Copy" [ref=e1718] [cursor=pointer]:
+                  - img [ref=e1719]
+          - main [ref=e1722]:
+            - generic [ref=e1723]:
+              - alert [ref=e1724]:
+                - generic [ref=e1726]:
+                  - img [ref=e1728]
+                  - generic [ref=e1732]:
+                    - generic [ref=e1734]: Your free instance will spin down with inactivity, which can delay requests by 50 seconds or more.
+                    - link "Upgrade now" [ref=e1736] [cursor=pointer]:
+                      - /url: /web/srv-d7fk4i57vvec73acusn0/plan
+              - button "Filter events 31" [ref=e1738] [cursor=pointer]:
+                - img [ref=e1740]
+                - generic [ref=e1742]:
+                  - text: Filter events
+                  - generic [ref=e1743]: "31"
+                - img [ref=e1744]
+              - list [ref=e1747]:
+                - listitem [ref=e1748]:
+                  - generic [ref=e1749]:
+                    - img [ref=e1752]
+                    - generic [ref=e1755]:
+                      - generic [ref=e1756]:
+                        - generic [ref=e1757]:
+                          - text: First
+                          - link "deploy" [ref=e1758] [cursor=pointer]:
+                            - /url: /web/srv-d7fk4i57vvec73acusn0/deploys/dep-d7fk4id7vvec73acusr0
+                        - text: started for
+                        - link "bf61d01" [ref=e1760] [cursor=pointer]:
+                          - /url: https://github.com/Twisted66/gpt-image-bridge/commit/bf61d01af479049434530b4b1b349b52986a220c
+                        - text: ":"
+                        - generic [ref=e1761]: "Initial commit: FastAPI image bridge backend"
+                      - generic [ref=e1762]: April 15, 2026 at 11:46 AM
+                  - generic [ref=e1765]:
+                    - img "Loading..." [ref=e1766]
+                    - button "Cancel deploy" [ref=e1769] [cursor=pointer]
+    - generic:
+      - generic:
+        - generic: "0 services selected:"
+        - generic:
+          - generic:
+            - generic:
+              - button:
+                - generic:
+                  - img
+                - generic: Move
+                - img
+      - generic:
+        - separator
+        - generic:
+          - generic:
+            - button:
+              - img
+  - iframe [ref=e200]:
+    

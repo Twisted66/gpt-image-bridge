@@ -1,10 +1,12 @@
 import os
 
-from fastapi import Depends, FastAPI, HTTPException, status
+from fastapi import Depends, FastAPI, HTTPException, Request, status
+from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 from auth import verify_api_key, verify_bearer_token
-from models import GenerateImageRequest, GenerateImageResponse
+from models import ErrorResponse, GenerateImageRequest, GenerateImageResponse
 from providers.generator import generate_image_bytes
 from storage import resolve_target, write_bytes
 
@@ -15,7 +17,7 @@ app = FastAPI(
 )
 
 # Configure CORS
-cors_origins = os.environ.get("CORS_ORIGINS", "*").split(",")
+cors_origins = os.environ.get("CORS_ORIGINS", "https://chat.openai.com,https://chatgpt.com").split(",")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[origin.strip() for origin in cors_origins],
@@ -25,26 +27,49 @@ app.add_middleware(
 )
 
 
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    """Handle Pydantic validation errors (400) with a structured response."""
+    details = [{"loc": err["loc"], "msg": err["msg"], "type": err["type"]} for err in exc.errors()]
+    return JSONResponse(
+        status_code=status.HTTP_400_BAD_REQUEST,
+        content=ErrorResponse(
+            ok=False,
+            error="Validation Error",
+            details=details
+        ).model_dump()
+    )
+
+
+@app.exception_handler(HTTPException)
+async def http_exception_handler(request: Request, exc: HTTPException):
+    """Handle standard HTTP errors (401, 403, 500) with a structured response."""
+    return JSONResponse(
+        status_code=exc.status_code,
+        content=ErrorResponse(
+            ok=False,
+            error=exc.detail,
+        ).model_dump()
+    )
+
+
 def verify_auth(
     authorization: str | None = None,
     x_api_key: str | None = None,
 ) -> str:
     """Verify either Bearer token or API key authentication."""
-    # Try API key first (simpler for Custom GPT)
     if x_api_key:
         try:
             return verify_api_key(x_api_key)
         except HTTPException:
             pass
 
-    # Fall back to Bearer token
     if authorization:
         try:
             return verify_bearer_token(authorization)
         except HTTPException:
             pass
 
-    # Neither worked
     raise HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="authentication required - provide either X-API-Key header or Bearer token",
@@ -57,7 +82,15 @@ def health() -> dict:
     return {"ok": True}
 
 
-@app.post("/generate-image", response_model=GenerateImageResponse)
+@app.post(
+    "/generate-image",
+    response_model=GenerateImageResponse,
+    responses={
+        400: {"model": ErrorResponse},
+        401: {"model": ErrorResponse},
+        500: {"model": ErrorResponse},
+    }
+)
 def generate_image(
     payload: GenerateImageRequest,
     _token: str = Depends(verify_auth),
@@ -68,12 +101,12 @@ def generate_image(
     except ValueError as exc:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
-            detail=str(exc),
+            detail=f"Invalid path: {exc}",
         ) from exc
     except RuntimeError as exc:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=str(exc),
+            detail=f"Configuration error: {exc}",
         ) from exc
 
     try:
@@ -81,15 +114,21 @@ def generate_image(
     except NotImplementedError as exc:
         raise HTTPException(
             status_code=status.HTTP_501_NOT_IMPLEMENTED,
-            detail=str(exc),
+            detail=f"Provider not implemented: {exc}",
         ) from exc
     except Exception as exc:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"provider failed: {exc}",
+            detail=f"Image generation failed: {exc}",
         ) from exc
 
-    write_bytes(target, raw)
+    try:
+        write_bytes(target, raw)
+    except Exception as exc:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"File storage failed: {exc}",
+        ) from exc
 
     return GenerateImageResponse(
         ok=True,
@@ -98,5 +137,5 @@ def generate_image(
         mime_type=mime_type,
         width=width,
         height=height,
-        message="image written",
+        message="image written successfully",
     )

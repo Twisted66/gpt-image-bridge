@@ -1,0 +1,124 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - generic [ref=e5]:
+          - link "Render" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - img "Render" [ref=e8]
+          - button "M My Workspace" [ref=e12] [cursor=pointer]:
+            - generic [ref=e13]:
+              - generic [ref=e14]: M
+              - generic "My Workspace" [ref=e15]
+              - img [ref=e16]
+        - generic [ref=e20]:
+          - navigation [ref=e21]:
+            - list [ref=e22]:
+              - listitem [ref=e23]:
+                - generic [ref=e338]:
+                  - img [ref=e1270]
+                  - generic [ref=e344]: New Blueprint
+          - button "Search Ctrl + K" [ref=e31] [cursor=pointer]:
+            - img [ref=e33]
+            - text: Search
+            - generic [ref=e35]:
+              - img [ref=e36]
+              - generic [ref=e38]: Ctrl
+              - generic [ref=e39]: +
+              - generic [ref=e40]: K
+              - generic [ref=e41]: K
+        - generic [ref=e42]:
+          - button "New" [ref=e44] [cursor=pointer]:
+            - generic [ref=e45]:
+              - img [ref=e46]
+              - generic [ref=e48]: New
+          - button "Upgrade" [ref=e50] [cursor=pointer]:
+            - generic [ref=e51]:
+              - img [ref=e52]
+              - generic [ref=e54]: Upgrade
+          - button "Help" [ref=e56] [cursor=pointer]:
+            - img "Help" [ref=e57]
+          - button "n" [ref=e62] [cursor=pointer]:
+            - generic [ref=e64]: "n"
+      - main [ref=e1275]:
+        - heading "You are deploying from a Blueprint for Twisted66/gpt-image-bridge" [level=1] [ref=e1278]:
+          - text: You are deploying from a Blueprint for
+          - link "Twisted66/gpt-image-bridge" [ref=e1279] [cursor=pointer]:
+            - /url: https://github.com/Twisted66/gpt-image-bridge
+        - generic [ref=e1280]:
+          - generic [ref=e1281]:
+            - generic [ref=e1282]:
+              - generic [ref=e1283]:
+                - generic [ref=e1285]: Blueprint Name
+                - generic [ref=e1286]: A unique name for your Blueprint.
+              - textbox "Blueprint Name" [active] [ref=e1291]
+            - generic [ref=e1292]:
+              - generic [ref=e1293]:
+                - generic [ref=e1295]: Branch
+                - generic [ref=e1296]:
+                  - text: The repository branch with the
+                  - code [ref=e1297]: render.yaml
+                  - text: file.
+              - combobox [ref=e1299]:
+                - generic [ref=e1301]:
+                  - generic [ref=e1302]: Branch
+                  - generic [ref=e1303]:
+                    - img
+                    - textbox "Branch" [ref=e1304]:
+                      - /placeholder: Search
+                      - text: master
+                    - button "Clear search input" [ref=e1305] [cursor=pointer]:
+                      - img [ref=e1306]
+            - generic [ref=e1308]:
+              - generic [ref=e1309]:
+                - generic [ref=e1311]: Blueprint Path
+                - generic [ref=e1312]:
+                  - text: The path to the Blueprint file in your repo (e.g.,
+                  - code [ref=e1313]: infra/render.yaml
+                  - text: ). Defaults to
+                  - code [ref=e1314]: render.yaml
+                  - text: at the root of your repository.
+              - textbox "Blueprint Path" [ref=e1318]:
+                - /placeholder: render.yaml
+            - generic [ref=e1319]:
+              - heading "Review Blueprint configurations from Twisted66/gpt-image-bridge." [level=2] [ref=e1320]:
+                - text: Review Blueprint configurations from
+                - strong [ref=e1321]: Twisted66/gpt-image-bridge
+                - text: .
+              - alert [ref=e1322]:
+                - generic [ref=e1324]:
+                  - img [ref=e1326]
+                  - generic [ref=e1332]:
+                    - text: All future updates to your
+                    - link "Blueprint file" [ref=e1333] [cursor=pointer]:
+                      - /url: https://render.com/docs/blueprint-spec
+                    - text: will be synced automatically, which may change your costs.
+            - generic [ref=e1338]:
+              - heading "Specified configurations" [level=3] [ref=e1340]
+              - generic [ref=e1344]:
+                - img [ref=e1345]
+                - generic [ref=e1348]:
+                  - text: Create web service
+                  - strong [ref=e1349]: gpt-image-bridge
+          - generic [ref=e1351]:
+            - button "Deploy Blueprint" [ref=e1352] [cursor=pointer]
+            - button "Cancel" [ref=e1353] [cursor=pointer]
+    - generic:
+      - generic:
+        - generic: "0 services selected:"
+        - generic:
+          - generic:
+            - generic:
+              - button:
+                - generic:
+                  - img
+                - generic: Move
+                - img
+      - generic:
+        - separator
+        - generic:
+          - generic:
+            - button:
+              - img
+  - iframe [ref=e200]:
+    

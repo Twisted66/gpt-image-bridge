@@ -1,0 +1,852 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - generic [ref=e5]:
+          - link "Render" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - img "Render" [ref=e8]
+          - button "M My Workspace" [ref=e12] [cursor=pointer]:
+            - generic [ref=e13]:
+              - generic [ref=e14]: M
+              - generic "My Workspace" [ref=e15]
+              - img [ref=e16]
+        - generic [ref=e20]:
+          - navigation [ref=e21]:
+            - list [ref=e22]:
+              - listitem [ref=e23]:
+                - generic [ref=e338]:
+                  - img [ref=e339]
+                  - generic [ref=e344]: New Blueprint
+          - button "Search Ctrl + K" [ref=e31] [cursor=pointer]:
+            - img [ref=e33]
+            - text: Search
+            - generic [ref=e35]:
+              - img [ref=e36]
+              - generic [ref=e38]: Ctrl
+              - generic [ref=e39]: +
+              - generic [ref=e40]: K
+              - generic [ref=e41]: K
+        - generic [ref=e42]:
+          - button "New" [ref=e44] [cursor=pointer]:
+            - generic [ref=e45]:
+              - img [ref=e46]
+              - generic [ref=e48]: New
+          - button "Upgrade" [ref=e50] [cursor=pointer]:
+            - generic [ref=e51]:
+              - img [ref=e52]
+              - generic [ref=e54]: Upgrade
+          - button "Help" [ref=e56] [cursor=pointer]:
+            - img "Help" [ref=e57]
+          - button "n" [ref=e62] [cursor=pointer]:
+            - generic [ref=e64]: "n"
+      - main [ref=e345]:
+        - generic [ref=e346]:
+          - heading "Create a new Blueprint Instance in My Workspace" [level=1] [ref=e347]:
+            - text: Create a new
+            - link "Blueprint Instance" [ref=e348] [cursor=pointer]:
+              - /url: https://render.com/docs/infrastructure-as-code
+            - text: in
+            - link "My Workspace" [ref=e349] [cursor=pointer]:
+              - /url: /w/tea-d0dhvlh5pdvs7396v7e0/settings
+          - generic [ref=e352]: Connect your Git repository or use an existing public repository URL.
+        - generic [ref=e353]:
+          - generic [ref=e354]:
+            - generic [ref=e356]:
+              - heading "Connect a repository" [level=4] [ref=e361]
+              - generic [ref=e362]:
+                - generic [ref=e364]:
+                  - generic [ref=e365]: Search repositories
+                  - generic [ref=e366]:
+                    - img
+                    - textbox "Search repositories" [active] [ref=e367]:
+                      - /placeholder: Search
+                - list [ref=e369]:
+                  - listitem [ref=e370]:
+                    - generic [ref=e371]:
+                      - img "GitHub" [ref=e373]
+                      - link "Twisted66 / gpt-image-bridge" [ref=e375] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/gpt-image-bridge
+                        - generic [ref=e376]: Twisted66 / gpt-image-bridge
+                      - generic [ref=e377]:
+                        - separator [ref=e378]: •
+                        - time [ref=e379]: 2 minutes ago
+                    - button "Connect" [ref=e380] [cursor=pointer]
+                  - listitem [ref=e381]:
+                    - generic [ref=e382]:
+                      - img "GitHub" [ref=e384]
+                      - link "Twisted66 / ULTRACTION-2026" [ref=e386] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/ULTRACTION-2026
+                        - generic [ref=e387]: Twisted66 / ULTRACTION-2026
+                      - generic [ref=e388]:
+                        - separator [ref=e389]: •
+                        - time [ref=e390]: 14 hours ago
+                    - button "Connect" [ref=e391] [cursor=pointer]
+                  - listitem [ref=e392]:
+                    - generic [ref=e393]:
+                      - img "GitHub" [ref=e395]
+                      - link "Twisted66 / CONSMGMT-2026" [ref=e397] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/CONSMGMT-2026
+                        - generic [ref=e398]: Twisted66 / CONSMGMT-2026
+                      - img "Private" [ref=e399]
+                      - generic [ref=e401]:
+                        - separator [ref=e402]: •
+                        - time [ref=e403]: 9 days ago
+                    - button "Connect" [ref=e404] [cursor=pointer]
+                  - listitem [ref=e405]:
+                    - generic [ref=e406]:
+                      - img "GitHub" [ref=e408]
+                      - link "Twisted66 / BALANCE-HRMS-2026" [ref=e410] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/BALANCE-HRMS-2026
+                        - generic [ref=e411]: Twisted66 / BALANCE-HRMS-2026
+                      - img "Private" [ref=e412]
+                      - generic [ref=e414]:
+                        - separator [ref=e415]: •
+                        - time [ref=e416]: 9 days ago
+                    - button "Connect" [ref=e417] [cursor=pointer]
+                  - listitem [ref=e418]:
+                    - generic [ref=e419]:
+                      - img "GitHub" [ref=e421]
+                      - link "Twisted66 / qmx" [ref=e423] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/qmx
+                        - generic [ref=e424]: Twisted66 / qmx
+                      - generic [ref=e425]:
+                        - separator [ref=e426]: •
+                        - time [ref=e427]: 21 days ago
+                    - button "Connect" [ref=e428] [cursor=pointer]
+                  - listitem [ref=e429]:
+                    - generic [ref=e430]:
+                      - img "GitHub" [ref=e432]
+                      - link "Twisted66 / modelhub-dashboard" [ref=e434] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/modelhub-dashboard
+                        - generic [ref=e435]: Twisted66 / modelhub-dashboard
+                      - img "Private" [ref=e436]
+                      - generic [ref=e438]:
+                        - separator [ref=e439]: •
+                        - time [ref=e440]: a month ago
+                    - button "Connect" [ref=e441] [cursor=pointer]
+                  - listitem [ref=e442]:
+                    - generic [ref=e443]:
+                      - img "GitHub" [ref=e445]
+                      - link "Twisted66 / tender-pdf-to-excel-automation" [ref=e447] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/tender-pdf-to-excel-automation
+                        - generic [ref=e448]: Twisted66 / tender-pdf-to-excel-automation
+                      - img "Private" [ref=e449]
+                      - generic [ref=e451]:
+                        - separator [ref=e452]: •
+                        - time [ref=e453]: a month ago
+                    - button "Connect" [ref=e454] [cursor=pointer]
+                  - listitem [ref=e455]:
+                    - generic [ref=e456]:
+                      - img "GitHub" [ref=e458]
+                      - link "Twisted66 / gian" [ref=e460] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/gian
+                        - generic [ref=e461]: Twisted66 / gian
+                      - img "Private" [ref=e462]
+                      - generic [ref=e464]:
+                        - separator [ref=e465]: •
+                        - time [ref=e466]: 2 months ago
+                    - button "Connect" [ref=e467] [cursor=pointer]
+                  - listitem [ref=e468]:
+                    - generic [ref=e469]:
+                      - img "GitHub" [ref=e471]
+                      - link "Twisted66 / 2026-GRN" [ref=e473] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/2026-GRN
+                        - generic [ref=e474]: Twisted66 / 2026-GRN
+                      - generic [ref=e475]:
+                        - separator [ref=e476]: •
+                        - time [ref=e477]: 2 months ago
+                    - button "Connect" [ref=e478] [cursor=pointer]
+                  - listitem [ref=e479]:
+                    - generic [ref=e480]:
+                      - img "GitHub" [ref=e482]
+                      - link "Twisted66 / GRN2026-PYTHON" [ref=e484] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/GRN2026-PYTHON
+                        - generic [ref=e485]: Twisted66 / GRN2026-PYTHON
+                      - img "Private" [ref=e486]
+                      - generic [ref=e488]:
+                        - separator [ref=e489]: •
+                        - time [ref=e490]: 2 months ago
+                    - button "Connect" [ref=e491] [cursor=pointer]
+                  - listitem [ref=e492]:
+                    - generic [ref=e493]:
+                      - img "GitHub" [ref=e495]
+                      - link "Twisted66 / ultraction-brand-system" [ref=e497] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/ultraction-brand-system
+                        - generic [ref=e498]: Twisted66 / ultraction-brand-system
+                      - img "Private" [ref=e499]
+                      - generic [ref=e501]:
+                        - separator [ref=e502]: •
+                        - time [ref=e503]: 2 months ago
+                    - button "Connect" [ref=e504] [cursor=pointer]
+                  - listitem [ref=e505]:
+                    - generic [ref=e506]:
+                      - img "GitHub" [ref=e508]
+                      - link "Twisted66 / ULTRACTION" [ref=e510] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/ULTRACTION
+                        - generic [ref=e511]: Twisted66 / ULTRACTION
+                      - img "Private" [ref=e512]
+                      - generic [ref=e514]:
+                        - separator [ref=e515]: •
+                        - time [ref=e516]: 2 months ago
+                    - button "Connect" [ref=e517] [cursor=pointer]
+                  - listitem [ref=e518]:
+                    - generic [ref=e519]:
+                      - img "GitHub" [ref=e521]
+                      - link "Twisted66 / -DOCKER-HMDM-FINAL" [ref=e523] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/-DOCKER-HMDM-FINAL
+                        - generic [ref=e524]: Twisted66 / -DOCKER-HMDM-FINAL
+                      - img "Private" [ref=e525]
+                      - generic [ref=e527]:
+                        - separator [ref=e528]: •
+                        - time [ref=e529]: 2 months ago
+                    - button "Connect" [ref=e530] [cursor=pointer]
+                  - listitem [ref=e531]:
+                    - generic [ref=e532]:
+                      - img "GitHub" [ref=e534]
+                      - link "Twisted66 / jorani-custom" [ref=e536] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/jorani-custom
+                        - generic [ref=e537]: Twisted66 / jorani-custom
+                      - generic [ref=e538]:
+                        - separator [ref=e539]: •
+                        - time [ref=e540]: 2 months ago
+                    - button "Connect" [ref=e541] [cursor=pointer]
+                  - listitem [ref=e542]:
+                    - generic [ref=e543]:
+                      - img "GitHub" [ref=e545]
+                      - link "Twisted66 / moltbot-me" [ref=e547] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/moltbot-me
+                        - generic [ref=e548]: Twisted66 / moltbot-me
+                      - generic [ref=e549]:
+                        - separator [ref=e550]: •
+                        - time [ref=e551]: 3 months ago
+                    - button "Connect" [ref=e552] [cursor=pointer]
+                  - listitem [ref=e553]:
+                    - generic [ref=e554]:
+                      - img "GitHub" [ref=e556]
+                      - link "Twisted66 / Nexus-02" [ref=e558] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/Nexus-02
+                        - generic [ref=e559]: Twisted66 / Nexus-02
+                      - img "Private" [ref=e560]
+                      - generic [ref=e562]:
+                        - separator [ref=e563]: •
+                        - time [ref=e564]: 3 months ago
+                    - button "Connect" [ref=e565] [cursor=pointer]
+                  - listitem [ref=e566]:
+                    - generic [ref=e567]:
+                      - img "GitHub" [ref=e569]
+                      - link "Twisted66 / TRACKPH" [ref=e571] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/TRACKPH
+                        - generic [ref=e572]: Twisted66 / TRACKPH
+                      - img "Private" [ref=e573]
+                      - generic [ref=e575]:
+                        - separator [ref=e576]: •
+                        - time [ref=e577]: 4 months ago
+                    - button "Connect" [ref=e578] [cursor=pointer]
+                  - listitem [ref=e579]:
+                    - generic [ref=e580]:
+                      - img "GitHub" [ref=e582]
+                      - link "Twisted66 / twisted-assistant" [ref=e584] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/twisted-assistant
+                        - generic [ref=e585]: Twisted66 / twisted-assistant
+                      - generic [ref=e586]:
+                        - separator [ref=e587]: •
+                        - time [ref=e588]: 5 months ago
+                    - button "Connect" [ref=e589] [cursor=pointer]
+                  - listitem [ref=e590]:
+                    - generic [ref=e591]:
+                      - img "GitHub" [ref=e593]
+                      - link "Twisted66 / leave-management-backend" [ref=e595] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/leave-management-backend
+                        - generic [ref=e596]: Twisted66 / leave-management-backend
+                      - img "Private" [ref=e597]
+                      - generic [ref=e599]:
+                        - separator [ref=e600]: •
+                        - time [ref=e601]: 5 months ago
+                    - button "Connect" [ref=e602] [cursor=pointer]
+                  - listitem [ref=e603]:
+                    - generic [ref=e604]:
+                      - img "GitHub" [ref=e606]
+                      - link "Twisted66 / BALANCE" [ref=e608] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/BALANCE
+                        - generic [ref=e609]: Twisted66 / BALANCE
+                      - generic [ref=e610]:
+                        - separator [ref=e611]: •
+                        - time [ref=e612]: 5 months ago
+                    - button "Connect" [ref=e613] [cursor=pointer]
+                  - listitem [ref=e614]:
+                    - generic [ref=e615]:
+                      - img "GitHub" [ref=e617]
+                      - link "Twisted66 / LMS-new" [ref=e619] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/LMS-new
+                        - generic [ref=e620]: Twisted66 / LMS-new
+                      - generic [ref=e621]:
+                        - separator [ref=e622]: •
+                        - time [ref=e623]: 6 months ago
+                    - button "Connect" [ref=e624] [cursor=pointer]
+                  - listitem [ref=e625]:
+                    - generic [ref=e626]:
+                      - img "GitHub" [ref=e628]
+                      - link "Twisted66 / LMS" [ref=e630] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/LMS
+                        - generic [ref=e631]: Twisted66 / LMS
+                      - img "Private" [ref=e632]
+                      - generic [ref=e634]:
+                        - separator [ref=e635]: •
+                        - time [ref=e636]: 6 months ago
+                    - button "Connect" [ref=e637] [cursor=pointer]
+                  - listitem [ref=e638]:
+                    - generic [ref=e639]:
+                      - img "GitHub" [ref=e641]
+                      - link "Twisted66 / GRN-FINAL1" [ref=e643] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/GRN-FINAL1
+                        - generic [ref=e644]: Twisted66 / GRN-FINAL1
+                      - img "Private" [ref=e645]
+                      - generic [ref=e647]:
+                        - separator [ref=e648]: •
+                        - time [ref=e649]: 6 months ago
+                    - button "Connect" [ref=e650] [cursor=pointer]
+                  - listitem [ref=e651]:
+                    - generic [ref=e652]:
+                      - img "GitHub" [ref=e654]
+                      - link "Twisted66 / HRM" [ref=e656] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/HRM
+                        - generic [ref=e657]: Twisted66 / HRM
+                      - generic [ref=e658]:
+                        - separator [ref=e659]: •
+                        - time [ref=e660]: 6 months ago
+                    - button "Connect" [ref=e661] [cursor=pointer]
+                  - listitem [ref=e662]:
+                    - generic [ref=e663]:
+                      - img "GitHub" [ref=e665]
+                      - link "Twisted66 / ai-testing-mcp" [ref=e667] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/ai-testing-mcp
+                        - generic [ref=e668]: Twisted66 / ai-testing-mcp
+                      - generic [ref=e669]:
+                        - separator [ref=e670]: •
+                        - time [ref=e671]: 7 months ago
+                    - button "Connect" [ref=e672] [cursor=pointer]
+                  - listitem [ref=e673]:
+                    - generic [ref=e674]:
+                      - img "GitHub" [ref=e676]
+                      - link "Twisted66 / claude-code" [ref=e678] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/claude-code
+                        - generic [ref=e679]: Twisted66 / claude-code
+                      - generic [ref=e680]:
+                        - separator [ref=e681]: •
+                        - time [ref=e682]: 7 months ago
+                    - button "Connect" [ref=e683] [cursor=pointer]
+                  - listitem [ref=e684]:
+                    - generic [ref=e685]:
+                      - img "GitHub" [ref=e687]
+                      - link "Twisted66 / leave-management-syste" [ref=e689] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/leave-management-syste
+                        - generic [ref=e690]: Twisted66 / leave-management-syste
+                      - img "Private" [ref=e691]
+                      - generic [ref=e693]:
+                        - separator [ref=e694]: •
+                        - time [ref=e695]: 7 months ago
+                    - button "Connect" [ref=e696] [cursor=pointer]
+                  - listitem [ref=e697]:
+                    - generic [ref=e698]:
+                      - img "GitHub" [ref=e700]
+                      - link "Twisted66 / NOTIF" [ref=e702] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/NOTIF
+                        - generic [ref=e703]: Twisted66 / NOTIF
+                      - img "Private" [ref=e704]
+                      - generic [ref=e706]:
+                        - separator [ref=e707]: •
+                        - time [ref=e708]: 8 months ago
+                    - button "Connect" [ref=e709] [cursor=pointer]
+                  - listitem [ref=e710]:
+                    - generic [ref=e711]:
+                      - img "GitHub" [ref=e713]
+                      - link "Twisted66 / n8n-frontdoor" [ref=e715] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/n8n-frontdoor
+                        - generic [ref=e716]: Twisted66 / n8n-frontdoor
+                      - img "Private" [ref=e717]
+                      - generic [ref=e719]:
+                        - separator [ref=e720]: •
+                        - time [ref=e721]: 8 months ago
+                    - button "Connect" [ref=e722] [cursor=pointer]
+                  - listitem [ref=e723]:
+                    - generic [ref=e724]:
+                      - img "GitHub" [ref=e726]
+                      - link "Twisted66 / web" [ref=e728] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/web
+                        - generic [ref=e729]: Twisted66 / web
+                      - img "Private" [ref=e730]
+                      - generic [ref=e732]:
+                        - separator [ref=e733]: •
+                        - time [ref=e734]: 8 months ago
+                    - button "Connect" [ref=e735] [cursor=pointer]
+                  - listitem [ref=e736]:
+                    - generic [ref=e737]:
+                      - img "GitHub" [ref=e739]
+                      - link "Twisted66 / leave-manager" [ref=e741] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/leave-manager
+                        - generic [ref=e742]: Twisted66 / leave-manager
+                      - img "Private" [ref=e743]
+                      - generic [ref=e745]:
+                        - separator [ref=e746]: •
+                        - time [ref=e747]: 8 months ago
+                    - button "Connect" [ref=e748] [cursor=pointer]
+                  - listitem [ref=e749]:
+                    - generic [ref=e750]:
+                      - img "GitHub" [ref=e752]
+                      - link "Twisted66 / NOTIFYME" [ref=e754] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/NOTIFYME
+                        - generic [ref=e755]: Twisted66 / NOTIFYME
+                      - img "Private" [ref=e756]
+                      - generic [ref=e758]:
+                        - separator [ref=e759]: •
+                        - time [ref=e760]: 8 months ago
+                    - button "Connect" [ref=e761] [cursor=pointer]
+                  - listitem [ref=e762]:
+                    - generic [ref=e763]:
+                      - img "GitHub" [ref=e765]
+                      - link "Twisted66 / UPDATE-main" [ref=e767] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/UPDATE-main
+                        - generic [ref=e768]: Twisted66 / UPDATE-main
+                      - img "Private" [ref=e769]
+                      - generic [ref=e771]:
+                        - separator [ref=e772]: •
+                        - time [ref=e773]: 9 months ago
+                    - button "Connect" [ref=e774] [cursor=pointer]
+                  - listitem [ref=e775]:
+                    - generic [ref=e776]:
+                      - img "GitHub" [ref=e778]
+                      - link "Twisted66 / BOT" [ref=e780] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/BOT
+                        - generic [ref=e781]: Twisted66 / BOT
+                      - img "Private" [ref=e782]
+                      - generic [ref=e784]:
+                        - separator [ref=e785]: •
+                        - time [ref=e786]: 9 months ago
+                    - button "Connect" [ref=e787] [cursor=pointer]
+                  - listitem [ref=e788]:
+                    - generic [ref=e789]:
+                      - img "GitHub" [ref=e791]
+                      - link "Twisted66 / GRN-FIREBASE-dg" [ref=e793] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/GRN-FIREBASE-dg
+                        - generic [ref=e794]: Twisted66 / GRN-FIREBASE-dg
+                      - img "Private" [ref=e795]
+                      - generic [ref=e797]:
+                        - separator [ref=e798]: •
+                        - time [ref=e799]: 9 months ago
+                    - button "Connect" [ref=e800] [cursor=pointer]
+                  - listitem [ref=e801]:
+                    - generic [ref=e802]:
+                      - img "GitHub" [ref=e804]
+                      - link "Twisted66 / sb1-NOTIF11" [ref=e806] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/sb1-NOTIF11
+                        - generic [ref=e807]: Twisted66 / sb1-NOTIF11
+                      - img "Private" [ref=e808]
+                      - generic [ref=e810]:
+                        - separator [ref=e811]: •
+                        - time [ref=e812]: 9 months ago
+                    - button "Connect" [ref=e813] [cursor=pointer]
+                  - listitem [ref=e814]:
+                    - generic [ref=e815]:
+                      - img "GitHub" [ref=e817]
+                      - link "Twisted66 / sb1-NOTIF" [ref=e819] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/sb1-NOTIF
+                        - generic [ref=e820]: Twisted66 / sb1-NOTIF
+                      - img "Private" [ref=e821]
+                      - generic [ref=e823]:
+                        - separator [ref=e824]: •
+                        - time [ref=e825]: 9 months ago
+                    - button "Connect" [ref=e826] [cursor=pointer]
+                  - listitem [ref=e827]:
+                    - generic [ref=e828]:
+                      - img "GitHub" [ref=e830]
+                      - link "Twisted66 / MDM" [ref=e832] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/MDM
+                        - generic [ref=e833]: Twisted66 / MDM
+                      - img "Private" [ref=e834]
+                      - generic [ref=e836]:
+                        - separator [ref=e837]: •
+                        - time [ref=e838]: 9 months ago
+                    - button "Connect" [ref=e839] [cursor=pointer]
+                  - listitem [ref=e840]:
+                    - generic [ref=e841]:
+                      - img "GitHub" [ref=e843]
+                      - link "Twisted66 / truein-apk-distribution" [ref=e845] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/truein-apk-distribution
+                        - generic [ref=e846]: Twisted66 / truein-apk-distribution
+                      - generic [ref=e847]:
+                        - separator [ref=e848]: •
+                        - time [ref=e849]: 10 months ago
+                    - button "Connect" [ref=e850] [cursor=pointer]
+                  - listitem [ref=e851]:
+                    - generic [ref=e852]:
+                      - img "GitHub" [ref=e854]
+                      - link "Twisted66 / v0-agi-architecture-design" [ref=e856] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/v0-agi-architecture-design
+                        - generic [ref=e857]: Twisted66 / v0-agi-architecture-design
+                      - img "Private" [ref=e858]
+                      - generic [ref=e860]:
+                        - separator [ref=e861]: •
+                        - time [ref=e862]: 10 months ago
+                    - button "Connect" [ref=e863] [cursor=pointer]
+                  - listitem [ref=e864]:
+                    - generic [ref=e865]:
+                      - img "GitHub" [ref=e867]
+                      - link "Twisted66 / GRN-PROD-CLEAN-00" [ref=e869] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/GRN-PROD-CLEAN-00
+                        - generic [ref=e870]: Twisted66 / GRN-PROD-CLEAN-00
+                      - img "Private" [ref=e871]
+                      - generic [ref=e873]:
+                        - separator [ref=e874]: •
+                        - time [ref=e875]: 10 months ago
+                    - button "Connect" [ref=e876] [cursor=pointer]
+                  - listitem [ref=e877]:
+                    - generic [ref=e878]:
+                      - img "GitHub" [ref=e880]
+                      - link "Twisted66 / Pdf" [ref=e882] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/Pdf
+                        - generic [ref=e883]: Twisted66 / Pdf
+                      - img "Private" [ref=e884]
+                      - generic [ref=e886]:
+                        - separator [ref=e887]: •
+                        - time [ref=e888]: 10 months ago
+                    - button "Connect" [ref=e889] [cursor=pointer]
+                  - listitem [ref=e890]:
+                    - generic [ref=e891]:
+                      - img "GitHub" [ref=e893]
+                      - link "Twisted66 / GRN-PROD" [ref=e895] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/GRN-PROD
+                        - generic [ref=e896]: Twisted66 / GRN-PROD
+                      - generic [ref=e897]:
+                        - separator [ref=e898]: •
+                        - time [ref=e899]: 10 months ago
+                    - button "Connect" [ref=e900] [cursor=pointer]
+                  - listitem [ref=e901]:
+                    - generic [ref=e902]:
+                      - img "GitHub" [ref=e904]
+                      - link "Twisted66 / workspace" [ref=e906] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/workspace
+                        - generic [ref=e907]: Twisted66 / workspace
+                      - img "Private" [ref=e908]
+                      - generic [ref=e910]:
+                        - separator [ref=e911]: •
+                        - time [ref=e912]: 10 months ago
+                    - button "Connect" [ref=e913] [cursor=pointer]
+                  - listitem [ref=e914]:
+                    - generic [ref=e915]:
+                      - img "GitHub" [ref=e917]
+                      - link "Twisted66 / EDMS-LATEST-1" [ref=e919] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/EDMS-LATEST-1
+                        - generic [ref=e920]: Twisted66 / EDMS-LATEST-1
+                      - img "Private" [ref=e921]
+                      - generic [ref=e923]:
+                        - separator [ref=e924]: •
+                        - time [ref=e925]: 10 months ago
+                    - button "Connect" [ref=e926] [cursor=pointer]
+                  - listitem [ref=e927]:
+                    - generic [ref=e928]:
+                      - img "GitHub" [ref=e930]
+                      - link "Twisted66 / EDMS01" [ref=e932] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/EDMS01
+                        - generic [ref=e933]: Twisted66 / EDMS01
+                      - img "Private" [ref=e934]
+                      - generic [ref=e936]:
+                        - separator [ref=e937]: •
+                        - time [ref=e938]: a year ago
+                    - button "Connect" [ref=e939] [cursor=pointer]
+                  - listitem [ref=e940]:
+                    - generic [ref=e941]:
+                      - img "GitHub" [ref=e943]
+                      - link "Twisted66 / construction-management-system" [ref=e945] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/construction-management-system
+                        - generic [ref=e946]: Twisted66 / construction-management-system
+                      - img "Private" [ref=e947]
+                      - generic [ref=e949]:
+                        - separator [ref=e950]: •
+                        - time [ref=e951]: a year ago
+                    - button "Connect" [ref=e952] [cursor=pointer]
+                  - listitem [ref=e953]:
+                    - generic [ref=e954]:
+                      - img "GitHub" [ref=e956]
+                      - link "Twisted66 / sharepoint-mcp-server" [ref=e958] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/sharepoint-mcp-server
+                        - generic [ref=e959]: Twisted66 / sharepoint-mcp-server
+                      - img "Private" [ref=e960]
+                      - generic [ref=e962]:
+                        - separator [ref=e963]: •
+                        - time [ref=e964]: a year ago
+                    - button "Connect" [ref=e965] [cursor=pointer]
+                  - listitem [ref=e966]:
+                    - generic [ref=e967]:
+                      - img "GitHub" [ref=e969]
+                      - link "Twisted66 / MCP-SP" [ref=e971] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/MCP-SP
+                        - generic [ref=e972]: Twisted66 / MCP-SP
+                      - generic [ref=e973]:
+                        - separator [ref=e974]: •
+                        - time [ref=e975]: a year ago
+                    - button "Connect" [ref=e976] [cursor=pointer]
+                  - listitem [ref=e977]:
+                    - generic [ref=e978]:
+                      - img "GitHub" [ref=e980]
+                      - link "Twisted66 / studio" [ref=e982] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/studio
+                        - generic [ref=e983]: Twisted66 / studio
+                      - img "Private" [ref=e984]
+                      - generic [ref=e986]:
+                        - separator [ref=e987]: •
+                        - time [ref=e988]: a year ago
+                    - button "Connect" [ref=e989] [cursor=pointer]
+                  - listitem [ref=e990]:
+                    - generic [ref=e991]:
+                      - img "GitHub" [ref=e993]
+                      - link "Twisted66 / GRN-FINAL" [ref=e995] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/GRN-FINAL
+                        - generic [ref=e996]: Twisted66 / GRN-FINAL
+                      - img "Private" [ref=e997]
+                      - generic [ref=e999]:
+                        - separator [ref=e1000]: •
+                        - time [ref=e1001]: a year ago
+                    - button "Connect" [ref=e1002] [cursor=pointer]
+                  - listitem [ref=e1003]:
+                    - generic [ref=e1004]:
+                      - img "GitHub" [ref=e1006]
+                      - link "Twisted66 / GRN-FIREBASE" [ref=e1008] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/GRN-FIREBASE
+                        - generic [ref=e1009]: Twisted66 / GRN-FIREBASE
+                      - img "Private" [ref=e1010]
+                      - generic [ref=e1012]:
+                        - separator [ref=e1013]: •
+                        - time [ref=e1014]: a year ago
+                    - button "Connect" [ref=e1015] [cursor=pointer]
+                  - listitem [ref=e1016]:
+                    - generic [ref=e1017]:
+                      - img "GitHub" [ref=e1019]
+                      - link "Twisted66 / v0-grn" [ref=e1021] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/v0-grn
+                        - generic [ref=e1022]: Twisted66 / v0-grn
+                      - img "Private" [ref=e1023]
+                      - generic [ref=e1025]:
+                        - separator [ref=e1026]: •
+                        - time [ref=e1027]: a year ago
+                    - button "Connect" [ref=e1028] [cursor=pointer]
+                  - listitem [ref=e1029]:
+                    - generic [ref=e1030]:
+                      - img "GitHub" [ref=e1032]
+                      - link "Twisted66 / v0-pfp" [ref=e1034] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/v0-pfp
+                        - generic [ref=e1035]: Twisted66 / v0-pfp
+                      - img "Private" [ref=e1036]
+                      - generic [ref=e1038]:
+                        - separator [ref=e1039]: •
+                        - time [ref=e1040]: a year ago
+                    - button "Connect" [ref=e1041] [cursor=pointer]
+                  - listitem [ref=e1042]:
+                    - generic [ref=e1043]:
+                      - img "GitHub" [ref=e1045]
+                      - link "Twisted66 / v0-dashboard-01" [ref=e1047] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/v0-dashboard-01
+                        - generic [ref=e1048]: Twisted66 / v0-dashboard-01
+                      - img "Private" [ref=e1049]
+                      - generic [ref=e1051]:
+                        - separator [ref=e1052]: •
+                        - time [ref=e1053]: a year ago
+                    - button "Connect" [ref=e1054] [cursor=pointer]
+                  - listitem [ref=e1055]:
+                    - generic [ref=e1056]:
+                      - img "GitHub" [ref=e1058]
+                      - link "Twisted66 / ugcgrn" [ref=e1060] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/ugcgrn
+                        - generic [ref=e1061]: Twisted66 / ugcgrn
+                      - img "Private" [ref=e1062]
+                      - generic [ref=e1064]:
+                        - separator [ref=e1065]: •
+                        - time [ref=e1066]: a year ago
+                    - button "Connect" [ref=e1067] [cursor=pointer]
+                  - listitem [ref=e1068]:
+                    - generic [ref=e1069]:
+                      - img "GitHub" [ref=e1071]
+                      - link "Twisted66 / RentalGrnTracker" [ref=e1073] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/RentalGrnTracker
+                        - generic [ref=e1074]: Twisted66 / RentalGrnTracker
+                      - img "Private" [ref=e1075]
+                      - generic [ref=e1077]:
+                        - separator [ref=e1078]: •
+                        - time [ref=e1079]: a year ago
+                    - button "Connect" [ref=e1080] [cursor=pointer]
+                  - listitem [ref=e1081]:
+                    - generic [ref=e1082]:
+                      - img "GitHub" [ref=e1084]
+                      - link "Twisted66 / rentalgrn" [ref=e1086] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/rentalgrn
+                        - generic [ref=e1087]: Twisted66 / rentalgrn
+                      - img "Private" [ref=e1088]
+                      - generic [ref=e1090]:
+                        - separator [ref=e1091]: •
+                        - time [ref=e1092]: a year ago
+                    - button "Connect" [ref=e1093] [cursor=pointer]
+                  - listitem [ref=e1094]:
+                    - generic [ref=e1095]:
+                      - img "GitHub" [ref=e1097]
+                      - link "Twisted66 / EDMS-LATEST" [ref=e1099] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/EDMS-LATEST
+                        - generic [ref=e1100]: Twisted66 / EDMS-LATEST
+                      - img "Private" [ref=e1101]
+                      - generic [ref=e1103]:
+                        - separator [ref=e1104]: •
+                        - time [ref=e1105]: a year ago
+                    - button "Connect" [ref=e1106] [cursor=pointer]
+                  - listitem [ref=e1107]:
+                    - generic [ref=e1108]:
+                      - img "GitHub" [ref=e1110]
+                      - link "Twisted66 / PORTALEDMS" [ref=e1112] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/PORTALEDMS
+                        - generic [ref=e1113]: Twisted66 / PORTALEDMS
+                      - img "Private" [ref=e1114]
+                      - generic [ref=e1116]:
+                        - separator [ref=e1117]: •
+                        - time [ref=e1118]: a year ago
+                    - button "Connect" [ref=e1119] [cursor=pointer]
+                  - listitem [ref=e1120]:
+                    - generic [ref=e1121]:
+                      - img "GitHub" [ref=e1123]
+                      - link "Twisted66 / DMS" [ref=e1125] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/DMS
+                        - generic [ref=e1126]: Twisted66 / DMS
+                      - img "Private" [ref=e1127]
+                      - generic [ref=e1129]:
+                        - separator [ref=e1130]: •
+                        - time [ref=e1131]: a year ago
+                    - button "Connect" [ref=e1132] [cursor=pointer]
+                  - listitem [ref=e1133]:
+                    - generic [ref=e1134]:
+                      - img "GitHub" [ref=e1136]
+                      - link "Twisted66 / bolt.diy" [ref=e1138] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/bolt.diy
+                        - generic [ref=e1139]: Twisted66 / bolt.diy
+                      - generic [ref=e1140]:
+                        - separator [ref=e1141]: •
+                        - time [ref=e1142]: a year ago
+                    - button "Connect" [ref=e1143] [cursor=pointer]
+                  - listitem [ref=e1144]:
+                    - generic [ref=e1145]:
+                      - img "GitHub" [ref=e1147]
+                      - link "Twisted66 / UPDATE" [ref=e1149] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/UPDATE
+                        - generic [ref=e1150]: Twisted66 / UPDATE
+                      - generic [ref=e1151]:
+                        - separator [ref=e1152]: •
+                        - time [ref=e1153]: a year ago
+                    - button "Connect" [ref=e1154] [cursor=pointer]
+                  - listitem [ref=e1155]:
+                    - generic [ref=e1156]:
+                      - img "GitHub" [ref=e1158]
+                      - link "Twisted66 / Twisted66" [ref=e1160] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/Twisted66
+                        - generic [ref=e1161]: Twisted66 / Twisted66
+                      - generic [ref=e1162]:
+                        - separator [ref=e1163]: •
+                        - time [ref=e1164]: a year ago
+                    - button "Connect" [ref=e1165] [cursor=pointer]
+                  - listitem [ref=e1166]:
+                    - generic [ref=e1167]:
+                      - img "GitHub" [ref=e1169]
+                      - link "Twisted66 / PF-Astro" [ref=e1171] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/PF-Astro
+                        - generic [ref=e1172]: Twisted66 / PF-Astro
+                      - img "Private" [ref=e1173]
+                      - generic [ref=e1175]:
+                        - separator [ref=e1176]: •
+                        - time [ref=e1177]: a year ago
+                    - button "Connect" [ref=e1178] [cursor=pointer]
+                  - listitem [ref=e1179]:
+                    - generic [ref=e1180]:
+                      - img "GitHub" [ref=e1182]
+                      - link "Twisted66 / sb1-pys52x2f" [ref=e1184] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/sb1-pys52x2f
+                        - generic [ref=e1185]: Twisted66 / sb1-pys52x2f
+                      - img "Private" [ref=e1186]
+                      - generic [ref=e1188]:
+                        - separator [ref=e1189]: •
+                        - time [ref=e1190]: a year ago
+                    - button "Connect" [ref=e1191] [cursor=pointer]
+                  - listitem [ref=e1192]:
+                    - generic [ref=e1193]:
+                      - img "GitHub" [ref=e1195]
+                      - link "Twisted66 / n8n-self-hosted" [ref=e1197] [cursor=pointer]:
+                        - /url: https://github.com/Twisted66/n8n-self-hosted
+                        - generic [ref=e1198]: Twisted66 / n8n-self-hosted
+                      - img "Private" [ref=e1199]
+                      - generic [ref=e1201]:
+                        - separator [ref=e1202]: •
+                        - time [ref=e1203]: a year ago
+                    - button "Connect" [ref=e1204] [cursor=pointer]
+            - generic [ref=e1206]:
+              - generic [ref=e1209]:
+                - heading "Public Git Repository" [level=4] [ref=e1211]
+                - generic [ref=e1212]:
+                  - text: Use a public repository by entering the URL below. Features like
+                  - link "PR Previews" [ref=e1213] [cursor=pointer]:
+                    - /url: https://render.com/docs/service-previews#pull-request-previews-git-backed
+                  - text: and
+                  - link "Auto-Deploy" [ref=e1214] [cursor=pointer]:
+                    - /url: https://render.com/docs/deploys
+                  - text: are not available if the repository has not been configured for Render.
+              - generic [ref=e1216]:
+                - generic [ref=e1218]:
+                  - generic [ref=e1219]: Repository URL
+                  - textbox "Repository URL" [ref=e1221]:
+                    - /placeholder: https://github.com/render-examples/temporal
+                - button "Continue" [disabled] [ref=e1222]
+          - generic [ref=e1223]:
+            - generic [ref=e1224]:
+              - generic [ref=e1225]:
+                - img "GitHub" [ref=e1227]
+                - text: GitHub
+              - list [ref=e1229]:
+                - listitem [ref=e1230]:
+                  - link "@Twisted66" [ref=e1231] [cursor=pointer]:
+                    - /url: https://github.com/Twisted66
+                    - img [ref=e1233]
+                    - text: "@Twisted66"
+                    - img [ref=e1237]
+                  - separator [ref=e1240]: •
+                  - generic [ref=e1241]: 67 repos
+              - button "Configure account" [ref=e1242] [cursor=pointer]:
+                - text: Configure account
+                - img [ref=e1244]
+            - generic [ref=e1247]:
+              - generic [ref=e1248]:
+                - img "GitLab" [ref=e1250]
+                - text: GitLab
+              - list
+              - button "Connect account" [ref=e1255] [cursor=pointer]:
+                - text: Connect account
+                - img [ref=e1257]
+            - generic [ref=e1259]:
+              - generic [ref=e1260]:
+                - img [ref=e1262]
+                - text: Bitbucket
+              - list
+              - button "Connect account" [ref=e1266] [cursor=pointer]:
+                - text: Connect account
+                - img [ref=e1268]
+    - generic:
+      - generic:
+        - generic: "0 services selected:"
+        - generic:
+          - generic:
+            - generic:
+              - button:
+                - generic:
+                  - img
+                - generic: Move
+                - img
+      - generic:
+        - separator
+        - generic:
+          - generic:
+            - button:
+              - img
+  - iframe [ref=e200]:
+    

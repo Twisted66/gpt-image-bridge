@@ -1,0 +1,183 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - banner [ref=e4]:
+        - generic [ref=e5]:
+          - link "Render" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - img "Render" [ref=e8]
+          - button "M My Workspace" [ref=e12] [cursor=pointer]:
+            - generic [ref=e13]:
+              - generic [ref=e14]: M
+              - generic "My Workspace" [ref=e15]
+              - img [ref=e16]
+        - generic [ref=e20]:
+          - navigation [ref=e21]:
+            - list [ref=e22]:
+              - listitem [ref=e23]:
+                - link "Blueprints" [ref=e1354] [cursor=pointer]:
+                  - /url: /blueprints
+                  - img [ref=e1355]
+                  - generic [ref=e1360]: Blueprints
+                - text: /
+              - listitem [ref=e1361]:
+                - link "gpt-image-bridge" [ref=e1362] [cursor=pointer]:
+                  - /url: /blueprint/exs-d7fk48pf9bms73eigvcg
+                  - generic [ref=e1363]: gpt-image-bridge
+                - button [ref=e1366] [cursor=pointer]:
+                  - img [ref=e1367]
+          - button "Search Ctrl + K" [ref=e31] [cursor=pointer]:
+            - img [ref=e33]
+            - text: Search
+            - generic [ref=e35]:
+              - img [ref=e36]
+              - generic [ref=e38]: Ctrl
+              - generic [ref=e39]: +
+              - generic [ref=e40]: K
+              - generic [ref=e41]: K
+        - generic [ref=e42]:
+          - button "New" [ref=e44] [cursor=pointer]:
+            - generic [ref=e45]:
+              - img [ref=e46]
+              - generic [ref=e48]: New
+          - button "Upgrade" [ref=e50] [cursor=pointer]:
+            - generic [ref=e51]:
+              - img [ref=e52]
+              - generic [ref=e54]: Upgrade
+          - button "Help" [ref=e56] [cursor=pointer]:
+            - img "Help" [ref=e57]
+          - button "n" [ref=e62] [cursor=pointer]:
+            - generic [ref=e64]: "n"
+      - generic [ref=e65]:
+        - navigation [ref=e1369]:
+          - separator [ref=e1370]
+          - generic [ref=e1371]:
+            - generic [ref=e1372]:
+              - link "Blueprints" [ref=e1373] [cursor=pointer]:
+                - /url: /blueprints
+                - img [ref=e1374]
+                - generic [ref=e1376]: Blueprints
+              - generic [ref=e1377]:
+                - img [ref=e1378]
+                - generic [ref=e1383]: gpt-image-bridge
+            - list [ref=e1385]:
+              - listitem [ref=e1386]:
+                - link "Resources" [ref=e1387] [cursor=pointer]:
+                  - /url: /blueprint/exs-d7fk48pf9bms73eigvcg/resources
+                  - img [ref=e1388]
+                  - generic [ref=e1390]: Resources
+              - listitem [ref=e1391]:
+                - link "Syncs" [ref=e1392] [cursor=pointer]:
+                  - /url: /blueprint/exs-d7fk48pf9bms73eigvcg/syncs
+                  - img [ref=e1393]
+                  - generic [ref=e1396]: Syncs
+              - listitem [ref=e1397]:
+                - link "Settings" [ref=e1398] [cursor=pointer]:
+                  - /url: /blueprint/exs-d7fk48pf9bms73eigvcg/settings
+                  - img [ref=e1399]
+                  - generic [ref=e1402]: Settings
+          - generic [ref=e1403]:
+            - alert [ref=e1404]:
+              - img [ref=e1406]
+              - generic [ref=e1410]:
+                - generic [ref=e1411]:
+                  - generic [ref=e1412]: "Workflows: Now in beta"
+                  - generic [ref=e1413]:
+                    - text: Orchestrate your agents and background jobs with automatic retries and scale-to-zero.
+                    - link "Learn more" [ref=e1414] [cursor=pointer]:
+                      - /url: https://render.com/docs/workflows
+                - link "Create Workflow" [ref=e1416] [cursor=pointer]:
+                  - /url: /workflow/new
+              - button "Close notification" [ref=e1417] [cursor=pointer]:
+                - img [ref=e1418]
+            - generic [ref=e1420]:
+              - button "Collapse items" [expanded] [ref=e1421] [cursor=pointer]:
+                - img [ref=e1422]
+              - list "Footer navigation" [ref=e1424]:
+                - listitem [ref=e1425]:
+                  - link "Changelog" [ref=e1426] [cursor=pointer]:
+                    - /url: https://render.com/changelog
+                    - img [ref=e1427]
+                    - generic [ref=e1432]: Changelog
+                - listitem [ref=e1433]:
+                  - link "Invite a friend" [ref=e1434] [cursor=pointer]:
+                    - /url: /invites
+                    - img [ref=e1435]
+                    - generic [ref=e1437]: Invite a friend
+                - listitem [ref=e1438]:
+                  - button "Contact support" [ref=e1439] [cursor=pointer]:
+                    - img [ref=e1440]
+                    - generic [ref=e1444]: Contact support
+              - link "Render Status" [ref=e1446] [cursor=pointer]:
+                - /url: https://status.render.com
+                - img [ref=e1447]
+                - generic [ref=e1449]: Render Status
+        - generic [ref=e1450]:
+          - banner [ref=e1452]:
+            - generic [ref=e1453]:
+              - generic [ref=e1454]:
+                - img [ref=e1455]
+                - generic [ref=e1460]: Blueprint
+              - generic [ref=e1461]:
+                - heading "gpt-image-bridge" [level=1] [ref=e1463]:
+                  - generic [ref=e1464]: gpt-image-bridge
+                - button "Manual sync" [ref=e1466] [cursor=pointer]:
+                  - text: Manual sync
+                  - img [ref=e1468]
+            - generic [ref=e1473]:
+              - generic [ref=e1475]:
+                - generic [ref=e1476]: "Blueprint ID:"
+                - generic "Blueprint ID:" [ref=e1477]:
+                  - generic [ref=e1478]: exs-d7fk48pf9bms73eigvcg
+                  - button "Copy" [ref=e1481] [cursor=pointer]:
+                    - img [ref=e1482]
+              - generic [ref=e1485]:
+                - img "GitHub" [ref=e1487]
+                - link "Twisted66 / gpt-image-bridge master" [ref=e1489] [cursor=pointer]:
+                  - /url: https://github.com/Twisted66/gpt-image-bridge/tree/master
+                  - generic [ref=e1490]:
+                    - generic [ref=e1491]: Twisted66 / gpt-image-bridge
+                    - img [ref=e1492]
+                    - generic [ref=e1494]: master
+          - main [ref=e1495]:
+            - generic [ref=e1496]:
+              - 'heading "Sync: bf61d01" [level=2] [ref=e1497]':
+                - text: Sync
+                - generic [ref=e1498]: ": bf61d01"
+              - generic [ref=e1500]:
+                - img [ref=e1502]
+                - generic [ref=e1507]:
+                  - generic [ref=e1510]:
+                    - link "bf61d01" [ref=e1511] [cursor=pointer]:
+                      - /url: https://github.com/Twisted66/gpt-image-bridge/tree/bf61d01af479049434530b4b1b349b52986a220c
+                    - text: ":Initial commit: FastAPI image bridge backend"
+                  - generic [ref=e1512]:
+                    - generic [ref=e1513]:
+                      - img [ref=e1514]
+                      - generic [ref=e1517]: running
+                    - time [ref=e1519]: a few seconds ago
+              - generic [ref=e1523]:
+                - img "Loading..." [ref=e1525]
+                - generic [ref=e1528]:
+                  - text: Create web service
+                  - link "gpt-image-bridge" [ref=e1529] [cursor=pointer]:
+                    - /url: /web/srv-d7fk4i57vvec73acusn0
+    - generic:
+      - generic:
+        - generic: "0 services selected:"
+        - generic:
+          - generic:
+            - generic:
+              - button:
+                - generic:
+                  - img
+                - generic: Move
+                - img
+      - generic:
+        - separator
+        - generic:
+          - generic:
+            - button:
+              - img
+  - iframe [ref=e200]:
+    

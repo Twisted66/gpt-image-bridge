@@ -32,7 +32,6 @@ paths:
         Generates an image based on the provided prompt and saves it to the specified path.
         Requires either OAuth2 or API Key authentication.
       security:
-        - oauth2: [image.generate]
         - apiKey: []
       requestBody:
         required: true
@@ -44,67 +43,111 @@ paths:
               properties:
                 prompt:
                   type: string
-                  description: Text description of the image to generate
+                  minLength: 1
+                  maxLength: 2000
+                  description: Detailed text description of the image to generate
                 out_path:
                   type: string
-                  description: Absolute file path where the image should be saved
+                  minLength: 1
+                  pattern: "^[a-zA-Z0-9_\\-\\./]+\\.(png|jpg|jpeg|webp)$"
+                  description: |
+                    The filename or relative subpath where the image should be saved. 
+                    Must NOT start with a slash or contain '..'.
+                    Example: 'assets/hero.png' or 'image.png'.
               required: [prompt, out_path]
       responses:
         '200':
-          description: Image generation result
+          description: Image generation successful
           content:
             application/json:
               schema:
-                type: object
-                additionalProperties: false
-                properties:
-                  ok:
-                    type: boolean
-                    description: Whether the operation was successful
-                  path:
-                    type: string
-                    description: The requested output path
-                  absolute_path:
-                    type: string
-                    description: The resolved absolute path where image was saved
-                  mime_type:
-                    type: string
-                    description: MIME type of the generated image (e.g., image/png)
-                  width:
-                    type: integer
-                    nullable: true
-                    description: Width of the generated image in pixels
-                  height:
-                    type: integer
-                    nullable: true
-                    description: Height of the generated image in pixels
-                  message:
-                    type: string
-                    description: Status message
-                required: [ok, path, absolute_path, mime_type, message]
+                $ref: '#/components/schemas/GenerateImageResponse'
         '400':
-          description: Bad request - invalid input parameters
+          description: Bad request - invalid input parameters or path traversal attempt
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
         '401':
           description: Unauthorized - missing or invalid authentication
-        '403':
-          description: Forbidden - insufficient permissions
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
         '500':
-          description: Server error during image generation
+          description: Server error during image generation or storage
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
 components:
+  schemas:
+    GenerateImageResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        ok:
+          type: boolean
+          description: Whether the operation was successful
+        path:
+          type: string
+          description: The requested relative output path
+        absolute_path:
+          type: string
+          description: The resolved absolute path where image was saved
+        mime_type:
+          type: string
+          description: MIME type of the generated image (e.g., image/png)
+        width:
+          type: integer
+          nullable: true
+          description: Width of the generated image in pixels
+        height:
+          type: integer
+          nullable: true
+          description: Height of the generated image in pixels
+        message:
+          type: string
+          description: Status message
+      required: [ok, path, absolute_path, mime_type, message]
+    
+    ErrorResponse:
+      type: object
+      additionalProperties: false
+      properties:
+        ok:
+          type: boolean
+          enum: [false]
+        error:
+          type: string
+          description: A high-level error code or summary
+        details:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorDetail'
+      required: [ok, error]
+    
+    ErrorDetail:
+      type: object
+      additionalProperties: false
+      properties:
+        loc:
+          type: array
+          items:
+            oneOf:
+              - type: string
+              - type: integer
+        msg:
+          type: string
+        type:
+          type: string
+      required: [msg, type]
+
   securitySchemes:
-    oauth2:
-      type: oauth2
-      description: OAuth 2.0 authentication (for advanced use cases)
-      flows:
-        authorizationCode:
-          authorizationUrl: https://auth.your-bridge.example.com/oauth/authorize
-          tokenUrl: https://auth.your-bridge.example.com/oauth/token
-          scopes:
-            image.generate: Generate image assets
     apiKey:
       type: apiKey
       in: header
       name: X-API-Key
       description: |
         API key authentication. Recommended for Custom GPT Actions.
-        Generate a secure key in your Render dashboard.
+        Use the key found in your Render dashboard environment settings.

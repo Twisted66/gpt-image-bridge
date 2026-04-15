@@ -18,6 +18,10 @@ services:
         generateValue: true
       - key: IMAGE_BRIDGE_ALLOWED_BEARER
         generateValue: true
+      - key: IMAGE_BRIDGE_OUTPUT_ROOT
+        value: "/tmp/outputs"
+      - key: CORS_ORIGINS
+        value: "https://chat.openai.com,https://chatgpt.com"
       - key: PYTHON_VERSION
         value: 3.11.0
     # Health check endpoint
